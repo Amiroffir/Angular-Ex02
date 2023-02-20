@@ -1,0 +1,39 @@
+@import "../flex.less";
+@import "../theme.less";
+
+.page-wrapper {
+  height: 100vh;
+  .header-wrapper,
+  .menu-content-footer-wrapper,
+  .content-footer-wrapper {
+    border: 1px solid #000;
+  }
+  .header-wrapper {
+    background-color: #ccc;
+    padding-top: 1em;
+    min-height: @header-height;
+
+    .header-title {
+      font-size: 2em;
+      text-align: center;
+    }
+  }
+  .menu-content-footer-wrapper {
+    height: calc(100% - @header-height);
+    .menu {
+      background-color: #ccc;
+      width: 10%;
+    }
+    .content-footer-wrapper {
+      overflow-y: auto;
+      .content {
+        background-color: #fff;
+        font-size: 2em;
+      }
+      .footer {
+        background-color: #ccc;
+        min-height: @footer-height;
+      }
+    }
+  }
+}

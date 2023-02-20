@@ -1,0 +1,29 @@
+<div class="tasks-buttons-wrapper flex">
+  <div class="buttons-wrapper">
+    <button
+      mat-button
+      class="add-task-btn"
+      (click)="onAddTaskClick()"
+      [ngClass]="addTaskEnabled ? '' : 'disabled'"
+    >
+      Add task
+    </button>
+    <button mat-button class="save-task-btn" (click)="onSaveClick()">
+      Save tasks
+    </button>
+    <mat-form-field class="example-full-width searchInput">
+      <mat-label>Search</mat-label>
+      <input matInput type="search" (input)="onSearch($event)" />
+    </mat-form-field>
+  </div>
+  <div class="tasks-wrapper flex-fill-remaining">
+    <app-task-box
+      class="task-box"
+      *ngFor="let task of tasks"
+      [task]="task"
+      (checkboxClick)="onCheckboxClick(task.id)"
+      (checkboxDblClick)="onCheckboxDblClick(task.id)"
+      (deleteClick)="onDeleteClick(task.id)"
+    ></app-task-box>
+  </div>
+</div>

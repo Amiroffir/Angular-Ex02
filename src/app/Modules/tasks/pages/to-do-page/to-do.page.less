@@ -1,0 +1,45 @@
+@import "../../../../../flex.less";
+.tasks-buttons-wrapper {
+  height: 100%;
+  .tasks-wrapper {
+    .flex;
+    .flex-column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3em;
+    height: 100%;
+    .task-box {
+      width: 100%;
+      max-width: 50%;
+      font-size: 0.55em;
+      margin-bottom: 1em;
+    }
+  }
+  .buttons-wrapper {
+    .flex;
+    .flex-column;
+    width: 15%;
+    .add-task-btn,
+    .load-task-btn,
+    .save-task-btn,
+    .searchInput {
+      margin: 0.5em 0.6em 0.7em 0.9em;
+      padding: 0.5em;
+    }
+
+    .add-task-btn {
+      background-color: blueviolet;
+      color: white;
+    }
+
+    .save-task-btn {
+      background-color: rgb(197, 197, 8);
+      color: white;
+    }
+
+    .disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+}

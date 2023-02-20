@@ -1,0 +1,8 @@
+<div class="buttons-wrapper">
+  <button
+    class="menu-button"
+    *ngFor="let item of menuItems"
+    (click)="onMenuClick(item.route)"
+    [innerText]="item.title"
+  ></button>
+</div>
