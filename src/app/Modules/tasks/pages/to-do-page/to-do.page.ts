@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { LayoutService } from 'src/app/services/Layout.service';
 import { ITask, TaskStatus } from '../../Models/task.interface';
 import { LocalStorageService } from '../../services/todo.service';
@@ -40,7 +39,6 @@ export class ToDoPage implements OnInit {
       this.tasks = this.originTasks;
     }
   }
-
   public onDeleteClick(id: number) {
     this.tasks = this.tasks.filter((task) => task.id !== id);
     this.originTasks = this.originTasks.filter((task) => task.id !== id);
@@ -63,7 +61,6 @@ export class ToDoPage implements OnInit {
     this.originTasks.push(newTask);
     this.localStorageService.set('tasks', this.originTasks);
   }
-
   public onCheckboxClick(id: number) {
     const task = this.originTasks.find((task) => task.id === id);
     if (task) {

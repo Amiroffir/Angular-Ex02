@@ -9,7 +9,7 @@ interface ILayoutService {
   providedIn: 'root',
 })
 export class LayoutService implements ILayoutService {
-  private _headerTitle: string = 'Welcome to my cool system';
+  private _headerTitle: string = '';
 
   constructor() {}
 

@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
   @Input() routes: tasksRoutes | undefined = undefined;
 
   public menuItems: IMenuItem[] = [];
-
+  //
   public ngOnInit(): void {
     for (const key in this.routes) {
       const menuItem: IMenuItem = (this.routes as any)[key];
